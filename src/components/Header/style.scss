@@ -1,0 +1,192 @@
+.header {
+    height: 100vh;
+    background: url('../../img/DSC_3789.jpg') 50% / cover no-repeat;
+    background-position: top;
+    padding-top: 50px;
+    &__logo {
+        display: inline-block;
+        margin: 100px 0 0 50px;
+        @media (max-width: 768px) {
+            margin: 30px 0 0 20px;
+        }
+        &_name {
+            font-family: Roboto Condensed;
+            font-size: 90px;
+            line-height: 96px;
+            font-weight: 500;
+            color: #fff;
+        }
+        &_sub {
+            color: #fff;
+            font-family: Roboto Condensed;
+            font-size: 32px;
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #fff;
+            }
+        }
+    }
+    &__menu {
+        width: 50%;
+        margin: 0 auto;
+        @media (max-width: 768px) {
+            display: none;
+        }
+        &_list {
+            display: flex;
+            justify-content: space-around;
+        }
+        &_item {
+            color: #fff;
+            padding: 5px 10px;
+            border: 0.5px solid transparent;
+            &:hover {
+                border: 0.5px solid #fff;
+                border-radius: 6px;
+            }
+        }
+    }
+}
+.burger_btn {
+    display: none;
+    height: 38px;
+    width: 38px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    outline: none;
+    margin: 0 20px 0 7px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    @media (max-width: 768px) {
+        display: block;
+    }
+}
+span {
+    display: block;
+    position: absolute;
+    height: 1.5px;
+    width: 24px;
+    background: #fff;
+    opacity: 1;
+    left: 6px;
+    transform: rotate(0deg);
+    transition: 0.3s ease-in-out;
+
+    &:nth-child(1) {
+        top: 10px;
+        &.open {
+            top: 18px;
+            transform: rotate(135deg);
+            background: var(--link-color);
+        }
+    }
+
+    &:nth-child(2) {
+        top: 18px;
+        &.open {
+            opacity: 0;
+            background: var(--link-color);
+        }
+    }
+
+    &:nth-child(3) {
+        top: 26px;
+        &.open {
+            top: 18px;
+            transform: rotate(-135deg);
+            background: var(--link-color);
+        }
+    }
+}
+.mobile {
+    &__menu {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        border-right: 0.8px solid var(--link-color);
+        visibility: hidden;
+        opacity: 0;
+        &.open {
+            left: 0;
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.5s ease;
+        }
+        @media (max-width: 768px) {
+            display: block;
+        }
+        &_block {
+            z-index: 100;
+            position: relative;
+            padding: 30px 25px;
+            background-color: rgb(166, 207, 213);
+            height: 100vh;
+        }
+        &_layout {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+            &.active {
+                opacity: 0.8;
+                z-index: 0;
+            }
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__item {
+        margin: 25px 0;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        a {
+            color: var(--link-color);
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 500;
+        }
+    }
+    &__contacts {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 70px;
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 100%;
+            a {
+                height: 20px;
+            }
+            svg {
+                width: 20px;
+                height: 20px;
+                fill: var(--link-color);
+            }
+        }
+    }
+}
