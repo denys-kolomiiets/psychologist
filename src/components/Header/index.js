@@ -8,6 +8,7 @@ import { Telegram } from '@mui/icons-material';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { Viber } from '../../icons/ContactIcons';
+import { AppointmentCard } from '../AppointmentCard';
 
 export const Header = () => {
     const [isBurgerOpen, setIsBurgerOpen] = useState(false);
@@ -94,6 +95,7 @@ export const Header = () => {
                             <div className="header__logo_sub">лікар-психолог</div>
                         </div>
                     </div>
+                    <AppointmentCard />
                 </Container>
             </header>
         </>

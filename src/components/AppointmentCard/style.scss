@@ -1,0 +1,25 @@
+.appointment {
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        max-width: 400px;
+        height: auto;
+        border-radius: 12px;
+        border: 0.8px solid var(--border-color);
+        background-color: rgba(166, 205, 213, 0.75);
+        margin: 50px 0 0 100px;
+        padding: 30px 40px;
+        @media (max-width: 578px) {
+            width: 100%;
+            margin: 50px 0;
+        }
+    }
+    &__text {
+        color: var(--link-color);
+        font-size: 22px;
+        line-height: 28px;
+    }
+}

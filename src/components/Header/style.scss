@@ -48,6 +48,11 @@
                 border: 0.5px solid #fff;
                 border-radius: 6px;
             }
+            a {
+                font-size: 17px;
+                line-height: 23px;
+                letter-spacing: normal;
+            }
         }
     }
 }
@@ -128,7 +133,7 @@ span {
             z-index: 100;
             position: relative;
             padding: 30px 25px;
-            background-color: rgb(166, 207, 213);
+            background-color: var(--bg-color);
             height: 100vh;
         }
         &_layout {
@@ -181,6 +186,7 @@ span {
             border-radius: 100%;
             a {
                 height: 20px;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
             }
             svg {
                 width: 20px;
