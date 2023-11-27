@@ -6,7 +6,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import { validation } from '../../helpers/validation';
-import CircularProgress from '@mui/material/CircularProgress';
+// import CircularProgress from '@mui/material/CircularProgress';
 // import { serverErrorMessage } from '../../helpers/serverErrorMsg';
 import { PhoneInput } from '../PhoneInput';
 
@@ -63,8 +63,6 @@ export default function Modal(props) {
         // setIsSubmitting(true);
         setIsSuccess(false);
 
-        console.log(formState, 'vse zaebis!');
-
         // dispatch(userLogIn(formState.values))
         //     .then(() => navigate('/dashboard'))
         //     .catch((error) => {
@@ -89,11 +87,11 @@ export default function Modal(props) {
                 <DialogContent>
                     <DialogContentText>
                         {isSuccess
-                            ? "Будь ласка, залиште свої дані для зворотнього зв'язку:"
-                            : 'Дякуємо за звернення! Очікуйте на дзвінок!'}
+                            ? 'Дякуємо за звернення! Очікуйте на дзвінок!'
+                            : "Будь ласка, залиште свої дані для зворотнього зв'язку:"}
                     </DialogContentText>
                 </DialogContent>
-                {isSuccess && (
+                {!isSuccess && (
                     <>
                         <DialogContent>
                             <TextField
@@ -111,21 +109,7 @@ export default function Modal(props) {
                                 error={!!formState.errors.name}
                                 value={formState.values.name}
                             />
-                            {/* <TextField
-                        onChange={handleChange}
-                        autoFocus
-                        margin="dense"
-                        id="phone"
-                        label="Телефон"
-                        type="tel"
-                        fullWidth
-                        variant="standard"
-                        name="phone"
-                        helperText={formState.errors.phone}
-                        error={!!formState.errors.phone}
-                        value={formState.values.phone}
-                        onFocus={() => handleFocus('phone')}
-                    /> */}
+
                             <PhoneInput
                                 onFocus={() => handleFocus('phone')}
                                 onChange={handleChange}

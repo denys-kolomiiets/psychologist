@@ -9,14 +9,21 @@ import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { Viber } from '../../icons/ContactIcons';
 import { AppointmentCard } from '../AppointmentCard';
-
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 export const Header = () => {
     const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+
+    if (!isBurgerOpen) {
+        document.body.style.overflow = 'unset';
+    } else {
+        document.body.style.overflow = 'hidden';
+    }
 
     const handleOpenBurger = (e) => {
         e.preventDefault();
         setIsBurgerOpen(!isBurgerOpen);
     };
+
     return (
         <>
             <header className="header">
@@ -25,7 +32,7 @@ export const Header = () => {
                         <div className="mobile__menu_block">
                             <ul className="mobile__list">
                                 <li className="mobile__item">
-                                    <a href="#">Про мене</a>
+                                    <a href="#about">Про мене</a>
                                 </li>
                                 <li className="mobile__item">
                                     <a href="#">Блог</a>
@@ -35,9 +42,6 @@ export const Header = () => {
                                 </li>
                                 <li className="mobile__item">
                                     <a href="#">Ціни</a>
-                                </li>
-                                <li className="mobile__item">
-                                    <a href="#">Контакти</a>
                                 </li>
                             </ul>
                             <ul className="mobile__contacts">
@@ -62,6 +66,17 @@ export const Header = () => {
                                     </a>
                                 </li>
                             </ul>
+                            <div className="mobile__contacts_location">
+                                <LocationOnIcon sx={{ color: 'var(--footer-color)' }} />
+                                <a
+                                    href="https://maps.app.goo.gl/1b1ZKnrK2HQ7vqbR7"
+                                    target="_blank"
+                                    className="footer__link"
+                                    rel="noreferrer"
+                                >
+                                    м.Київ, вул.Михайлівська, 20Б
+                                </a>
+                            </div>
                         </div>
                         <div className={classNames('mobile__menu_layout', { active: isBurgerOpen })}></div>
                     </nav>
@@ -73,7 +88,7 @@ export const Header = () => {
                     <nav className="header__menu">
                         <ul className="header__menu_list">
                             <li className="header__menu_item">
-                                <a href="#">Про мене</a>
+                                <a href="#about">Про мене</a>
                             </li>
                             <li className="header__menu_item">
                                 <a href="#">Блог</a>
@@ -85,7 +100,7 @@ export const Header = () => {
                                 <a href="#">Ціни</a>
                             </li>
                             <li className="header__menu_item">
-                                <a href="#">Контакти</a>
+                                <a href="#contacts">Контакти</a>
                             </li>
                         </ul>
                     </nav>
