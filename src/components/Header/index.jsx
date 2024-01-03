@@ -10,6 +10,8 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import { Viber } from '../../icons/ContactIcons';
 import { AppointmentCard } from '../AppointmentCard';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { Link as ScrollLink } from 'react-scroll';
+
 export const Header = () => {
     const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
@@ -81,36 +83,88 @@ export const Header = () => {
                         <div className={classNames('mobile__menu_layout', { active: isBurgerOpen })}></div>
                     </nav>
                     <button className="burger_btn" onClick={handleOpenBurger}>
-                        <span className={classNames('burger', { open: isBurgerOpen })}></span>
-                        <span className={classNames('burger', { open: isBurgerOpen })}></span>
-                        <span className={classNames('burger', { open: isBurgerOpen })}></span>
+                        <span className={classNames('burger_item', { open: isBurgerOpen })}></span>
+                        <span className={classNames('burger_item', { open: isBurgerOpen })}></span>
+                        <span className={classNames('burger_item', { open: isBurgerOpen })}></span>
                     </button>
                     <nav className="header__menu">
                         <ul className="header__menu_list">
                             <li className="header__menu_item">
-                                <a href="#about">Про мене</a>
+                                <ScrollLink
+                                    style={{ cursor: 'pointer' }}
+                                    activeClass="active"
+                                    to="about"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-30}
+                                    duration={500}
+                                >
+                                    Про мене
+                                </ScrollLink>
                             </li>
                             <li className="header__menu_item">
-                                <a href="#">Блог</a>
+                                <ScrollLink
+                                    style={{ cursor: 'pointer' }}
+                                    activeClass="active"
+                                    to="blog"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-30}
+                                    duration={500}
+                                >
+                                    Блог
+                                </ScrollLink>
                             </li>
                             <li className="header__menu_item">
-                                <a href="#">Послуги</a>
+                                <ScrollLink
+                                    style={{ cursor: 'pointer' }}
+                                    activeClass="active"
+                                    to="services"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-30}
+                                    duration={500}
+                                >
+                                    Послуги
+                                </ScrollLink>
                             </li>
                             <li className="header__menu_item">
-                                <a href="#">Ціни</a>
+                                <ScrollLink
+                                    style={{ cursor: 'pointer' }}
+                                    activeClass="active"
+                                    to="price"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-30}
+                                    duration={500}
+                                >
+                                    Ціни
+                                </ScrollLink>
                             </li>
                             <li className="header__menu_item">
-                                <a href="#contacts">Контакти</a>
+                                <ScrollLink
+                                    style={{ cursor: 'pointer' }}
+                                    activeClass="active"
+                                    to="contacts"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-30}
+                                    duration={500}
+                                >
+                                    Контакти
+                                </ScrollLink>
                             </li>
                         </ul>
                     </nav>
                     <div className="header__wrapper">
-                        <div className="header__logo">
-                            <h1 className="header__logo_name">Анна Яцушко</h1>
-                            <div className="header__logo_sub">лікар-психолог</div>
+                        <div className="header__logo_wrapper">
+                            <div className="header__logo">
+                                <h1 className="header__logo_name">Анна Яцушко</h1>
+                                <div className="header__logo_sub">лікар-психолог</div>
+                            </div>
+                            <AppointmentCard />
                         </div>
                     </div>
-                    <AppointmentCard />
                 </Container>
             </header>
         </>

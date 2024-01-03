@@ -1,12 +1,9 @@
 .blog {
+    padding: 60px 0;
     &__title {
-        margin: 60px 0 5px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        @media (max-width: 576px) {
-            margin: 30px 0 5px 0;
-        }
         h2 {
             color: var(--title-color);
             font-size: 28px;
@@ -34,8 +31,11 @@
     }
     &__article {
         &_content {
-            margin: 40px 0;
+            margin: 30px 0;
             float: right;
+            @media (max-width: 576px) {
+                margin: 20px 0;
+            }
         }
         &_img {
             width: 300px;
@@ -43,6 +43,10 @@
             border-radius: 12px;
             margin: 0 0 20px 20px;
             float: right;
+            @media (max-width: 576px) {
+                width: 200px;
+                margin: 0 0 10px 10px;
+            }
         }
 
         &_text {

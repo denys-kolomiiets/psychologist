@@ -1,0 +1,27 @@
+.feedback {
+    padding: 60px 0 40px 0;
+    background-color: rgba(166, 205, 213, 0.2);
+    &__title {
+        color: var(--footer-color);
+        margin-bottom: 20px;
+    }
+    &__subtitle {
+        color: var(--footer-color);
+        margin-top: 40px;
+    }
+    &__form {
+        max-width: 500px;
+        padding: 20px 20px;
+        border: 0.8px solid rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+        box-shadow:
+            0px 4px 6px rgba(0, 109, 111, 0.1),
+            0px 1px 3px rgba(0, 109, 111, 0.08);
+        background-color: rgba(255, 255, 240, 0.7);
+        &_btns {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+    }
+}

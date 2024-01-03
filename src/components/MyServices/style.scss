@@ -1,4 +1,4 @@
-.about {
+.myServices {
     background-color: rgba(166, 205, 213, 0.2);
     padding: 60px 0;
     &__title {
@@ -46,9 +46,15 @@
         @media (max-width: 576px) {
             width: 100%;
         }
-        p {
+        li {
+            list-style-type: disc;
+
             font-size: 18px;
             line-height: 24px;
+            margin: 10px 0 10px 10px;
+            &::marker {
+                color: var(--footer-color);
+            }
         }
     }
 }
