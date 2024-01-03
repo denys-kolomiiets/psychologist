@@ -17,7 +17,6 @@ export const PhoneInput = (props) => {
                         {...props}
                         value={value}
                         type="tel"
-                        autoFocus
                         margin="dense"
                         variant="standard"
                         helperText={helperText}

@@ -9,6 +9,7 @@ import { validation } from '../../helpers/validation';
 // import CircularProgress from '@mui/material/CircularProgress';
 // import { serverErrorMessage } from '../../helpers/serverErrorMsg';
 import { PhoneInput } from '../PhoneInput';
+import './style.scss';
 
 export default function Modal(props) {
     const { open, onClose } = props;

@@ -5,4 +5,7 @@ export const palette = {
     secondary: {
         main: '#b3af8f',
     },
+    tertiary: {
+        main: '#909696',
+    },
 };

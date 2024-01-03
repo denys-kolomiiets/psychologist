@@ -1,20 +1,18 @@
 .blog {
     padding: 60px 0;
     &__title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         h2 {
+            text-align: center;
             color: var(--title-color);
             font-size: 28px;
             line-height: 34px;
             letter-spacing: normal;
             font-weight: 700;
         }
-        &_divider {
-            width: 30%;
-            height: 0.8px;
-            background-color: var(--title-color);
+        &:focus {
+            outline: 1px solid var(--title-color);
+            padding: 5px 10px;
+            border-radius: 12px;
         }
     }
     &__wrapper {
@@ -30,6 +28,9 @@
         }
     }
     &__article {
+        &_title {
+            color: var(--title-color);
+        }
         &_content {
             margin: 30px 0;
             float: right;
@@ -52,7 +53,9 @@
         &_text {
             display: inline;
             font-size: 18px;
-            line-height: 24px;
+            line-height: 26px;
+            font-weight: 400;
+            color: var(--text-color);
             @media (max-width: 576px) {
                 width: 100%;
             }
