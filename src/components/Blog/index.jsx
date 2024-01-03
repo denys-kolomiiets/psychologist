@@ -4,14 +4,14 @@ import blog_img from './img/Blog_img.jpg';
 
 export const Blog = () => {
     return (
-        <>
+        <div className="blog">
             <Container maxWidth="lg">
-                <div className="blog__title">
+                <div className="blog__title" id="blog">
                     <h2>Блог</h2>
                     <div className="blog__title_divider"></div>
                     <div className="blog__wrapper">
                         <article className="blog__article">
-                            <h2 className="blog__article_title">Коли варто звернутись до психолога?</h2>
+                            <h2 className="blog__article_title">Коли варто звернутися до психолога?</h2>
                             <div className="blog__article_content">
                                 <img src={blog_img} alt="blog_img" className="blog__article_img" />
                                 <p className="blog__article_text">
@@ -63,6 +63,6 @@ export const Blog = () => {
                     </div>
                 </div>
             </Container>
-        </>
+        </div>
     );
 };

@@ -122,8 +122,13 @@ export default function Modal(props) {
                             <div className="spinner" style={{ position: 'absolute', top: '-20%', left: '40%' }}>
                                 {/* {isSubmitting && <CircularProgress />} */}
                             </div>
-                            <Button onClick={onClose}>Скасувати</Button>
-                            <Button onClick={submit}>Відправити</Button>
+                            <Button variant="outlined" onClick={onClose}>
+                                Скасувати
+                            </Button>
+
+                            <Button variant="contained" onClick={submit}>
+                                Відправити
+                            </Button>
                         </DialogActions>
                     </>
                 )}

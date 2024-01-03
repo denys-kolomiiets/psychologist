@@ -1,16 +1,23 @@
 .header {
     height: 100vh;
-    background: url('../../img/DSC_3789.jpg') 50% / cover no-repeat;
+    background: url('../../img/main_bg.jpg') no-repeat;
+    background-size: cover;
     background-position: top;
+    position: relative;
     padding-top: 50px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
     &__logo {
         display: inline-block;
-        margin: 100px 0 0 50px;
+        margin: 100px 50px 0 0;
         @media (max-width: 768px) {
             margin: 30px 0 0 0px;
         }
         &_name {
-            font-family: Roboto Condensed;
+            font-family: 'Roboto';
             font-size: 90px;
             line-height: 96px;
             font-weight: 500;
@@ -25,8 +32,9 @@
             color: #fff;
             font-family: Roboto Condensed;
             font-size: 32px;
-            &:before,
-            &:after {
+            line-height: 38px;
+            font-weight: 300;
+            &:before {
                 content: '';
                 display: block;
                 width: 100%;
@@ -78,7 +86,7 @@
         display: block;
     }
 }
-span {
+.burger_item {
     display: block;
     position: absolute;
     height: 1.5px;
