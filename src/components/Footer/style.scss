@@ -28,6 +28,11 @@
             align-items: center;
             a {
                 color: var(--footer-color);
+                &:focus {
+                    outline: 1px solid var(--footer-color);
+                    padding: 5px 10px;
+                    border-radius: 12px;
+                }
             }
         }
     }
@@ -44,6 +49,11 @@
                 display: flex;
                 align-items: center;
                 color: var(--footer-color);
+                &:focus {
+                    outline: 1px solid var(--footer-color);
+                    padding: 2px 7px;
+                    border-radius: 12px;
+                }
             }
             svg path {
                 fill: var(--footer-color);

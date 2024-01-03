@@ -6,9 +6,8 @@ export const Price = () => {
     return (
         <section className="price">
             <Container maxWidth="lg">
-                <div className="price__title" id="price">
+                <div className="price__title" id="price" tabIndex={0}>
                     <h2>Ціни</h2>
-                    <div className="price__title_divider" />
                 </div>
                 <div className="price__wrapper">
                     <div className="price__description">

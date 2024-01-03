@@ -30,7 +30,7 @@ export const Header = () => {
         <>
             <header className="header">
                 <Container maxWidth="xl">
-                    <nav className={classNames('mobile__menu', { open: isBurgerOpen })}>
+                    <nav autoFocus className={classNames('mobile__menu', { open: isBurgerOpen })}>
                         <div className="mobile__menu_block">
                             <ul className="mobile__list">
                                 <li className="mobile__item">
@@ -98,6 +98,7 @@ export const Header = () => {
                                     smooth={true}
                                     offset={-30}
                                     duration={500}
+                                    tabIndex={0}
                                 >
                                     Про мене
                                 </ScrollLink>
@@ -111,6 +112,7 @@ export const Header = () => {
                                     smooth={true}
                                     offset={-30}
                                     duration={500}
+                                    tabIndex={0}
                                 >
                                     Блог
                                 </ScrollLink>
@@ -124,6 +126,7 @@ export const Header = () => {
                                     smooth={true}
                                     offset={-30}
                                     duration={500}
+                                    tabIndex={0}
                                 >
                                     Послуги
                                 </ScrollLink>
@@ -137,6 +140,7 @@ export const Header = () => {
                                     smooth={true}
                                     offset={-30}
                                     duration={500}
+                                    tabIndex={0}
                                 >
                                     Ціни
                                 </ScrollLink>
@@ -150,6 +154,7 @@ export const Header = () => {
                                     smooth={true}
                                     offset={-30}
                                     duration={500}
+                                    tabIndex={0}
                                 >
                                     Контакти
                                 </ScrollLink>

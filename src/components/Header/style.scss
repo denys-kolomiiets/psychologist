@@ -55,7 +55,7 @@
         }
         &_item {
             color: #fff;
-            padding: 5px 10px;
+
             border: 0.5px solid transparent;
             &:hover {
                 border: 0.5px solid #fff;
@@ -65,6 +65,12 @@
                 font-size: 17px;
                 line-height: 23px;
                 letter-spacing: normal;
+                padding: 5px 10px;
+                &:focus {
+                    outline: 0.5px solid #fff;
+                    padding: 5px 10px;
+                    border-radius: 6px;
+                }
             }
         }
     }

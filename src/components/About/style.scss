@@ -1,21 +1,20 @@
 .about {
     background-color: rgba(166, 205, 213, 0.2);
     padding: 60px 0;
+    margin: 0 auto;
     &__title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         h2 {
+            text-align: center;
             color: var(--footer-color);
             font-size: 28px;
             line-height: 34px;
             letter-spacing: normal;
             font-weight: 700;
         }
-        &_divider {
-            width: 30%;
-            height: 0.8px;
-            background-color: var(--footer-color);
+        &:focus {
+            outline: 1px solid var(--footer-color);
+            padding: 5px 10px;
+            border-radius: 12px;
         }
     }
     &__wrapper {
@@ -48,7 +47,9 @@
         }
         p {
             font-size: 18px;
-            line-height: 24px;
+            line-height: 26px;
+            color: var(--text-color);
+            font-weight: 400;
         }
     }
 }

@@ -85,8 +85,10 @@ export const FeedbackForm = () => {
     return (
         <section className="feedback">
             <Container maxWidth="lg">
-                <h2 className="feedback__title">Для отримання зворотнього зв'язку, будь ласка, залиште свої дані:</h2>
-                <div className="feedback__form">
+                <h2 className="feedback__title" tabIndex={0}>
+                    Для отримання зворотнього зв'язку, будь ласка, залиште свої дані:
+                </h2>
+                <form className="feedback__form">
                     <div className="feedback__form_inputs">
                         <TextField
                             onChange={handleChange}
@@ -112,14 +114,14 @@ export const FeedbackForm = () => {
                         />
                     </div>
                     <div className="feedback__form_btns">
-                        <Button variant="contained" onClick={submit}>
+                        <Button variant="contained" onClick={submit} disableRipple>
                             Відправити
                         </Button>
-                        <Button variant="outlined" onClick={clearForm}>
+                        <Button variant="outlined" onClick={clearForm} disableRipple>
                             Скасувати
                         </Button>
                     </div>
-                </div>
+                </form>
                 <h3 className="feedback__subtitle">Або скористайтеся контактами, що наведені нижче:</h3>
             </Container>
         </section>

@@ -6,9 +6,8 @@ export const MyServices = () => {
     return (
         <section className="myServices">
             <Container maxWidth="lg">
-                <div className="myServices__title" id="services">
-                    <h2>Послуги</h2>
-                    <div className="myServices__title_divider" />
+                <div className="myServices__title" id="services" tabIndex={0}>
+                    <h2>Послуги психолога</h2>
                 </div>
                 <div className="myServices__wrapper">
                     <div className="myServices__img">

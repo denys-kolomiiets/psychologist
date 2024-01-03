@@ -1,17 +1,16 @@
 import { Container } from '@mui/material';
 import './style.scss';
-import anna_img from './img/anna_img.jpg';
+import about_img from './img/about_img.jpg';
 export const AboutMe = () => {
     return (
         <section className="about">
             <Container maxWidth="lg">
-                <div className="about__title" id="about">
+                <div className="about__title" id="about" tabIndex={0}>
                     <h2>Про мене</h2>
-                    <div className="about__title_divider"></div>
                 </div>
                 <div className="about__wrapper">
                     <div className="about__img">
-                        <img src={anna_img} alt="anna_img" />
+                        <img src={about_img} alt="anna_img" />
                     </div>
                     <div className="about__description">
                         <p>
